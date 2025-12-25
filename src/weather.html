@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart-Travel-planner</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-linear-to-br from-sky-100 to-sky-300 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <div class="text-xl font-bold text-blue-600">SmartTravel</div>
+          <div class="hidden md:flex space-x-6">
+            <a href="home.html" class="text-gray-700 hover:texy-blue-600"
+              >Home</a
+            >
+            <a href="destination.html" class="text-gray-700 hover:texy-blue-600"
+              >destination</a
+            >
+            <a href="weather.html" class="text-gray-700 hover:texy-blue-600"
+              >Weather</a
+            >
+            <a href="places.html" class="text-gray-700 hover:texy-blue-600"
+              >Places</a
+            >
+            <a href="Budget" class="text-gray-700 hover:texy-blue-600"
+              >Budget</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- weather card -->
+    <div class="flex justify-center mt-20 px-4">
+      <div
+        class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md text-center"
+      >
+        <h1 class="text-2xl font-bold text-sky-600 mb-1">weather Report</h1>
+        <h2 id="cityName" class="text-lg text-gray-600 font-semibold mb-6"></h2>
+        <!-- loading -->
+        <div id="loading" class="text-gray-500 animate-pulse">
+          Fetching Weather Data...
+        </div>
+        <!-- Weather Data -->
+        <div
+          id="weatherBox"
+          class="mt-6 bg-sky-50 rounded-xl p-5 space-y-4 text-gray-700 hidden"
+        >
+          <div class="flex justify-between">
+            <span class="font-semibold"> 🌡️Temperature</span>
+            <span><span id="temp"></span>°C</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold">😊Feels like:</span>
+            <span><span id="feels"></span>°C</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold">☁️Condition:</span>
+            <span id="desc" class="capitalize"></span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold">💧Humidity</span>
+            <span><span id="humidity"></span>%</span>
+          </div>
+          <div>
+            <div class="flex justify-between">
+              <span class="font-semibold">💨Wind Speed:</span>
+              <span><span id="wind"></span>m/s</span>
+            </div>
+          </div>
+        </div>
+        <!-- Error -->
+        <p id="error" class="hidden text-red-600 mt-4 font-semibold">
+          Weather Data Not Found
+        </p>
+      </div>
+    </div>
+    <script src="./js/weather.js"></script>
+  </body>
+</html>

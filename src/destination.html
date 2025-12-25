@@ -11,26 +11,26 @@
     />
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body>
+  <body class="bg-linear-to-br from-sky-100 to-sky-300 min-h-screen">
     <!-- Navbar -->
     <nav class="bg-white shadow-md">
       <div class="max-w-6xl mx-auto px-4">
         <div class="flex justify-between items-center h-16">
           <div class="text-xl font-bold text-blue-600">SmartTravel</div>
           <div class="hidden md:flex space-x-6">
-            <a href="home.html" class="text-gray-700 hower:texy-blue-600"
+            <a href="home.html" class="text-gray-700 hover:texy-blue-600"
               >Home</a
             >
-            <a href="destination.html" class="text-gray-700 hower:texy-blue-600"
+            <a href="destination.html" class="text-gray-700 hover:texy-blue-600"
               >destination</a
             >
-            <a href="weather.html" class="text-gray-700 hower:texy-blue-600"
+            <a href="weather.html" class="text-gray-700 hover:texy-blue-600"
               >Weather</a
             >
-            <a href="places.html" class="text-gray-700 hower:texy-blue-600"
+            <a href="places.html" class="text-gray-700 hover:texy-blue-600"
               >Places</a
             >
-            <a href="Budget" class="text-gray-700 hower:texy-blue-600"
+            <a href="Budget" class="text-gray-700 hover:texy-blue-600"
               >Budget</a
             >
           </div>
@@ -53,15 +53,17 @@
           <div class="flex justify-between">
             <span class="font-semibold">Latitude:</span>
             <span id="lat"></span>
-
-              <span class="font-semibold">Longitude:</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold">Longitude:</span>
             <span id="lon"></span>
           </div>
-         
+
           <div class="flex justify-between">
             <span class="font-semibold">Country:</span>
             <span id="country"></span>
-
+          </div>
+          <div class="flex justify-between">
             <span class="font-semibold">State:</span>
             <span id="state"></span>
           </div>
@@ -69,12 +71,26 @@
             <span class="font-semibold">Population:</span>
             <span id="population"></span>
           </div>
-            
-          </div>
-          <p id="error" class="hidden text-red-500 mt-4"> City not found....</p>
         </div>
+       
+          <a
+          id="weatherBtn"
+          class="block mt-4 bg-sky-500 text-white py-2 rounded hover:bg-sky-500"
+          >Check Weather</a
+        >
+
+        <a
+          id="placesBtn"
+          class="block mt-4 bg-sky-500 text-white py-2 rounded hover:bg-sky-500"
+          >Check Places</a
+        >
+        
+
+        
+        <p id="error" class="hidden text-red-500 mt-4">City not found....</p>
       </div>
     </div>
+
     <script src="./js/destination.js"></script>
   </body>
 </html>
